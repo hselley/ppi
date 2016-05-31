@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Programación para Internet</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body>
+
+  <!-- Aqui va la cabecera -->
+    <div class="container-fluid cabecera" style="height:200px;">
+      <div class="container">
+        <h1 class="titulo-principal">AJAX</h1>
+        <p></p>
+      </div>
+    </div>
+
+  <!-- Barra superior de navagación -->
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
+    <div class="container">
+      <div class="navbar-header" id="logo">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
+          <span class="sr-only">Desplegar / Ocultar Menú</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand">PPI</a>
+      </div>
+      <!-- Inicia Menú-->
+      <div class="collapse navbar-collapse" id="navegacion-fm">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Contenido <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="usabilidad.html">Usabilidad</a></li>
+              <li><a href="arquitecturaInformacion.html">Arquitectura de la Información</a></li>
+              <li><a href="html.html">HTML</a></li>
+              <li><a href="css.html">CSS</a></li>
+              <li><a href="js.html">JavaScript</a></li>
+              <li><a href="jQuery.html">jQuery</a></li>
+              <li><a href="php.html">PHP</a></li>
+              <li><a href="mysql.html">MySQL</a></li>
+              <li><a href="bootstrap.html">BootStrap</a></li>
+              <li><a href="angularjs.html">Angular JS</a></li>
+              <li class="active"><a href="ajax.html">AJAX</a></li>
+              <li><a href="json.html">jSON</a></li>
+            </ul>
+          </li>
+          <li><a href="ejemplosAdicionales.html">Ejemplos Adicionales</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+              Más <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="https://docs.google.com/spreadsheets/d/1wmbjMiMReDwduc0kb1ToaQcs3OBi0WRU2Qb6kYiGERQ/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
+              <li><a href="proyectos.html">Proyectos Finales</a></li>
+              <li><a href="link.html">Enlaces de Interés</a></li>
+              <li><a href="about.html">Acerca De ...</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="main container">
+
+    <article class="tema">
+      <h2>Introducción</h2>
+      <p class="text-justify">
+        AJAX es el sueño de los desarrolladores debido a que les permite:
+      </p>
+      <ul>
+        <li>
+          <p class="text-justify">Actualizar una página sin recargar la página por completo.</p>
+        </li>
+        <li>
+          <p class="text-justify">Solicitar datos a un servidor luego de que la página haya sido cargada.</p>
+        </li>
+        <li>
+          <p class="text-justify">Recibir datos de un servidor luego de que la página haya sido cargada.</p>
+        </li>
+        <li>
+          <p class="text-justify">Enviar datos a un servidor en segundo plano.</p>
+        </li>
+      </ul>
+      <p class="text-justify">
+        <b>AJAX</b> = <b>A</b>synchronous <b>Ja</b>vaScript <b>X</b>ML.
+      </p>
+      <p class="text-justify">
+        AJAX es una técnica para crear páginas rápidas y dinámicas. Permite a las páginas web ser actualizadas de forma asíncrona mediante un intercambio de pequeñas cantidades de información
+        en segundo plano.
+      </p>
+      <p class="text-justify">
+        Google hizo popular AJAX en 2005 con <i>Google Suggest</i>.
+      </p>
+      <p class="text-justify">
+        <i>Google Suggest</i> utiliza AJAX para crear una interfaz web dinámica: cuando se comienza a escribir en la caja de busqueda de Google, JavaScript envía los caracteres al servidor y éste le
+        devuelve la lista de sugerencias de búsqueda.
+      </p>
+
+      <h2>Como funciona AJAX</h2>
+      <img src="img/ajax.gif" class="img-responsive imgcenter">
+
+      <h2>AJAX está basado en los estándares de Internet</h2>
+      <p class="text-justify">
+        AJAX está basado en los estándares de Internet y utiliza una combinación de:
+      </p>
+      <ul>
+        <li>
+          <p class="text-justufy">
+            Objeto XMLHttpRequest (para recibir datos desde un servidor)
+          </p>
+        </li>
+        <li>
+          <p class="text-justufy">
+            JavaScript/DOM (para desplegar y tulizar los datos)
+          </p>
+        </li>
+      </ul>
+      <p class="text-justify">
+        <b>Nota</b>: <b>XMLHttpRequest</b> es un nombre engañoso, no es necesario conocer XML para utilizar AJAX.
+      </p>
+    </article>
+
+  </section>
+
+  <!-- Scripts que se necesitan para el sitio -->
+  <script src="../js/jquery.js" charset="utf-8"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
