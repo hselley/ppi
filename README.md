@@ -11,3 +11,6 @@ obtenidos de varios sitios, principalmente:
 * w3schools.com
 * jquery.com
 * bootstrap.com
+
+Sitio creado con fines meramente académicos y sin fines de
+lucro en lo absoluto.
