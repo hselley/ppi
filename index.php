@@ -6,7 +6,7 @@
   <title>Programación para Internet</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/iconos.css">
   <!-- Google Analytics -->
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,6 +18,7 @@
   ga('send', 'pageview');
 
 </script>
+<script src="https://www.w3counter.com/tracker.js?id=107371"></script>
 </head>
 <body>
 
@@ -29,57 +30,8 @@
     </div>
   </div>
 
-  <!-- Barra superior de navagación -->
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
-    <div class="container">
-      <div class="navbar-header" id="logo">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
-          <span class="sr-only">Desplegar / Ocultar Menú</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="index.html" class="navbar-brand">PPI</a>
-      </div>
-      <!-- Inicia Menú-->
-      <div class="collapse navbar-collapse" id="navegacion-fm">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">Inicio</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-              Contenido <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="usabilidad.html">Usabilidad</a></li>
-              <li><a href="arquitecturaInformacion.html">Arquitectura de la Información</a></li>
-              <li><a href="html.html">HTML</a></li>
-              <li><a href="css.html">CSS</a></li>
-              <li><a href="js.html">JavaScript</a></li>
-              <li><a href="jQuery.html">jQuery</a></li>
-              <li><a href="php.html">PHP</a></li>
-              <li><a href="mysql.html">MySQL</a></li>
-              <li><a href="bootstrap.html">BootStrap</a></li>
-              <li><a href="angularjs.html">Angular JS</a></li>
-              <li><a href="ajax.html">AJAX</a></li>
-              <li><a href="json.html">jSON</a></li>
-            </ul>
-          </li>
-          <li><a href="ejemplosAdicionales.html">Ejemplos Adicionales</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-              Más <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="https://docs.google.com/spreadsheets/d/1wmbjMiMReDwduc0kb1ToaQcs3OBi0WRU2Qb6kYiGERQ/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
-              <li><a href="proyectos.html">Proyectos Finales</a></li>
-              <li><a href="link.html">Enlaces de Interés</a></li>
-              <li><a href="about.html">Acerca De ...</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Barra superior de navegación -->
+  <?php include("menuSuperior.php"); ?>
 
   <section class="main container">
 
@@ -87,11 +39,11 @@
 
         <!-- Tema 1 -->
         <article class="tema clearfix">
-          <a href="usabilidad.html" class="thumb pull-left">
+          <a href="usabilidad.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/usabilidad.jpg" alt="Usabilidad" >
           </a>
           <h2 class="titulo-tema">
-            <a href="usabilidad.html">
+            <a href="usabilidad.php">
               Usabilidad
             </a>
           </h2>
@@ -99,17 +51,17 @@
             En esta sección se describen los conceptos básicos y la importancia de la usabilidad en los sitios Web.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="usabilidad.html" class="btn btn-primary">Leer más</a>
+            <a href="usabilidad.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
         <!-- Tema 2 -->
         <article class="tema clearfix">
-          <a href="arquitecturaInformacion.html" class="thumb pull-left">
+          <a href="arquitecturaInformacion.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/arquitecturaInformacion.png" alt="">
           </a>
           <h2 class="titulo-tema">
-            <a href="arquitecturaInformacion.html">
+            <a href="arquitecturaInformacion.php">
               Arquitectura de la Información
             </a>
           </h2>
@@ -117,17 +69,17 @@
             En esta sección se describen los conceptos básicos sobre la arquitectura de la información así como las actividades que debe realizar un arquitecto de la información.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="arquitecturaInformacion.html" class="btn btn-primary">Leer más</a>
+            <a href="arquitecturaInformacion.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
         <!-- Tema 3 -->
         <article class="tema clearfix">
-          <a href="html.html" class="thumb pull-left">
+          <a href="html.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/html5.jpg" alt="HTML">
           </a>
           <h2 class="titulo-tema">
-            <a href="html.html">
+            <a href="html.php">
               HTML
             </a>
           </h2>
@@ -136,17 +88,17 @@
             las etiquetas principales para el desarrollo de una página Web de acuerdo a los estándares de la W3C.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="html.html" class="btn btn-primary">Leer más</a>
+            <a href="html.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
         <!-- Tema 4 -->
         <article class="tema clearfix">
-          <a href="css.html" class="thumb pull-left">
+          <a href="css.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/css3.png" alt="">
           </a>
           <h2 class="titulo-tema">
-            <a href="css.html">
+            <a href="css.php">
               CSS
             </a>
           </h2>
@@ -155,17 +107,17 @@
             en algún otro medio.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="css.html" class="btn btn-primary">Leer más</a>
+            <a href="css.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
         <!-- Tema 5 -->
         <article class="tema clearfix">
-          <a href="js.html" class="thumb pull-left">
+          <a href="js.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/js.png" alt="" >
           </a>
           <h2 class="titulo-tema">
-            <a href="js.html">
+            <a href="js.php">
               JavaScript
             </a>
           </h2>
@@ -173,17 +125,17 @@
             JavaScript es un lenguaje de programación de HTML y la Web. La programación permite que las computadoras hagan lo que deseemos que hagan (y no viceversa).
           </p>
           <div class="contenedor-botones text-right">
-            <a href="js.html" class="btn btn-primary">Leer más</a>
+            <a href="js.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
         <!-- Tema 6 -->
         <article class="tema clearfix">
-          <a href="jQuery.html" class="thumb pull-left">
+          <a href="jQuery.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/jquery.png" alt="">
           </a>
           <h2 class="titulo-tema">
-            <a href="jQuery.html">
+            <a href="jQuery.php">
               jQuery
             </a>
           </h2>
@@ -191,17 +143,17 @@
             jQuery es una biblioteca de scripts JS. El objetivo principal de jQuery es simplificar la programación de JavaScript. jQuery es sencillo de aprender.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="jQuery.html" class="btn btn-primary">Leer más</a>
+            <a href="jQuery.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
         <!-- Tema 7 -->
         <article class="tema clearfix">
-          <a href="php.html" class="thumb pull-left">
+          <a href="php.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/php.png" alt="">
           </a>
           <h2 class="titulo-tema">
-            <a href="php.html">
+            <a href="php.php">
               PHP
             </a>
           </h2>
@@ -209,17 +161,17 @@
             PHP es un lenguaje script del lado del servidor. Es una herramienta poderosa para desarrollar páginas Web interactivas.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="php.html" class="btn btn-primary">Leer más</a>
+            <a href="php.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
         <!-- Tema 8 -->
         <article class="tema clearfix">
-          <a href="mysql.html" class="thumb pull-left">
+          <a href="mysql.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/mysql.png" alt="">
           </a>
           <h2 class="titulo-tema">
-            <a href="mysql.html">
+            <a href="mysql.php">
               MySQL
             </a>
           </h2>
@@ -227,17 +179,17 @@
             SQL es un lenguaje estándar para acceso a bases de datos. MySQL es una implementación del lenguaje SQL.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="mysql.html" class="btn btn-primary">Leer más</a>
+            <a href="mysql.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
         <!-- Tema 9 -->
         <article class="tema clearfix">
-          <a href="bootstrap.html" class="thumb pull-left">
+          <a href="bootstrap.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/bootstrap.png" alt="">
           </a>
           <h2 class="titulo-tema">
-            <a href="bootstrap.html">
+            <a href="bootstrap.php">
               Bootstrap
             </a>
           </h2>
@@ -245,17 +197,17 @@
             Bootstrap es la herramienta más popular de desarrollo HTML, CSS y JS  para realizar sitios web responsivos. Bootstrap es completamente gratuito y sencillo de usar.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="bootstrap.html" class="btn btn-primary">Leer más</a>
+            <a href="bootstrap.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
         <!-- Tema 10 -->
         <article class="tema clearfix">
-          <a href="angularjs.html" class="thumb pull-left">
+          <a href="angularjs.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/angular.png" alt="">
           </a>
           <h2 class="titulo-tema">
-            <a href="angularjs.html">
+            <a href="angularjs.php">
               AngularJS
             </a>
           </h2>
@@ -263,18 +215,35 @@
             AngularJS es una extensión de HTML con nuevos atributos. Es ideal para aplicaciones de una sola página (SPA's). AngularJS es sencillo de aprender.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="angularjs.html" class="btn btn-primary">Leer más</a>
+            <a href="angularjs.php" class="btn btn-primary">Leer más</a>
           </div>
         </article>
 
-
         <!-- Tema 11 -->
         <article class="tema clearfix">
-          <a href="ajax.html" class="thumb pull-left">
+          <a href="git.php" class="thumb pull-left">
+            <img class="img-thumbnail" src="img/git.png" alt="">
+          </a>
+          <h2 class="titulo-tema">
+            <a href="git.php">
+              Git
+            </a>
+          </h2>
+          <p class="post-contenido text-justify">
+            Git es un sistema de control de versiones de software libre diseñado para manejar desde proyectos pequeños hasta muy grandes con rapidez y eficiencia.
+          </p>
+          <div class="contenedor-botones text-right">
+            <a href="git.php" class="btn btn-primary">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Tema 12 -->
+        <!-- <article class="tema clearfix">
+          <a href="ajax.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/ajax.jpg" alt="AJAX">
           </a>
           <h2 class="titulo-tema">
-            <a href="ajax.html">
+            <a href="ajax.php">
               AJAX
             </a>
           </h2>
@@ -283,18 +252,17 @@
             ha sido cargada y enviar información a un servidor en segundo plano.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="ajax.html" class="btn btn-primary">Leer más</a>
+            <a href="ajax.php" class="btn btn-primary">Leer más</a>
           </div>
-        </article>
+        </article> -->
 
-
-        <!-- Tema 12 -->
-        <article class="tema clearfix">
-          <a href="json.html" class="thumb pull-left">
+        <!-- Tema 13 -->
+        <!-- <article class="tema clearfix">
+          <a href="json.php" class="thumb pull-left">
             <img class="img-thumbnail" src="img/json.png" alt="jSON">
           </a>
           <h2 class="titulo-tema">
-            <a href="json.html">
+            <a href="json.php">
               jSON
             </a>
           </h2>
@@ -302,9 +270,9 @@
             jSON es una sintáxis para almacenamiento e intercambio de información. jSON es una alternativa sencilla de usar a XML.
           </p>
           <div class="contenedor-botones text-right">
-            <a href="json.html" class="btn btn-primary">Leer más</a>
+            <a href="json.php" class="btn btn-primary">Leer más</a>
           </div>
-        </article>
+        </article> -->
   </section>
 
   <!-- Aca va el pie de página -->
@@ -314,13 +282,13 @@
         <div class="col-xs-6">
           <p>Dr. Héctor Selley - <em>Universidad Anáhuac México Norte</em></p>
         </div>
-        <div class="col-xs-3">CopyLeft - versión 0.1 - <a href="about.html">Acerca de ...</a></div>
+        <div class="col-xs-3">CopyLeft - versión 0.1 - <a href="about.php">Acerca de ...</a></div>
       	<div class="col-xs-3 social">
       		<ul class="list-inline text-right">
-      			<li><a href="http://www.twitter.com/hector_selley" target="_blank" class="icon-twitter2"></a></li>
-      			<li><a href="https://plus.google.com/u/0/+HectorJulianSelleyRojas/posts" target="_blank" class="icon-google-plus2"></a></li>
-      			<li><a href="https://www.youtube.com/user/hectorselley" target="_blank" class="icon-youtube3"></a></li>
-      			<li><a href="mailto:hector.selley@gmail.com" class="icon-mail"></a></li>
+      			<li><a href="http://www.twitter.com/hector_selley" target="_blank" class="icon-twitter" style="background-color: #00b0cb;"></a></li>
+      			<li><a href="https://plus.google.com/u/0/+HectorJulianSelleyRojas/posts" target="_blank" class="icon-google-plus" style="background-color: #f48400;"></a></li>
+      			<li><a href="https://www.youtube.com/user/hectorselley" target="_blank" class="icon-youtube" style="background-color: red;"></a></li>
+      			<li><a href="mailto:hector.selley@gmail.com" class="icon-envelop" style="background-color: gray;"></a></li>
       		</ul>
       	</div>
       </div>

@@ -6,7 +6,7 @@
   <title>Programación para Internet</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/iconos.css">
   <link rel="stylesheet" href="css/styles/tomorrow-night.css">
   <script src="js/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
@@ -21,57 +21,8 @@
       </div>
     </div>
 
-  <!-- Barra superior de navagación -->
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
-    <div class="container">
-      <div class="navbar-header" id="logo">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
-          <span class="sr-only">Desplegar / Ocultar Menú</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="index.html" class="navbar-brand">PPI</a>
-      </div>
-      <!-- Inicia Menú-->
-      <div class="collapse navbar-collapse" id="navegacion-fm">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.html">Inicio</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-              Contenido <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="usabilidad.html">Usabilidad</a></li>
-              <li><a href="arquitecturaInformacion.html">Arquitectura de la Información</a></li>
-              <li><a href="html.html">HTML</a></li>
-              <li><a href="css.html">CSS</a></li>
-              <li><a href="js.html">JavaScript</a></li>
-              <li><a href="jQuery.html">jQuery</a></li>
-              <li class="active"><a href="php.html">PHP</a></li>
-              <li><a href="mysql.html">MySQL</a></li>
-              <li><a href="bootstrap.html">BootStrap</a></li>
-              <li><a href="angularjs.html">Angular JS</a></li>
-              <li><a href="ajax.html">AJAX</a></li>
-              <li><a href="json.html">jSON</a></li>
-            </ul>
-          </li>
-          <li><a href="ejemplosAdicionales.html">Ejemplos Adicionales</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-              Más <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="https://docs.google.com/spreadsheets/d/1wmbjMiMReDwduc0kb1ToaQcs3OBi0WRU2Qb6kYiGERQ/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
-              <li><a href="proyectos.html">Proyectos Finales</a></li>
-              <li><a href="link.html">Enlaces de Interés</a></li>
-              <li><a href="about.html">Acerca De ...</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Barra superior de navegación -->
+  <?php include("menuSuperior.php"); ?>
 
   <section class="main container">
 
@@ -820,7 +771,7 @@
             <td>Verdadero si $x es mayor que $y</td>
           </tr>
           <tr>
-            <td>&gt;</td>
+            <td>&lt;</td>
             <td>Menor que</td>
             <td>$x &lt; $y</td>
             <td>Verdadero si $x es menor que $y</td>

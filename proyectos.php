@@ -6,7 +6,7 @@
   <title>Programación para Internet</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/iconos.css">
   <style>
     table > thead > tr > td {
       text-align: center;
@@ -23,57 +23,8 @@
       </div>
     </div>
 
-  <!-- Barra superior de navagación -->
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
-    <div class="container">
-      <div class="navbar-header" id="logo">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navegacion-fm">
-          <span class="sr-only">Desplegar / Ocultar Menú</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="index.html" class="navbar-brand">PPI</a>
-      </div>
-      <!-- Inicia Menú-->
-      <div class="collapse navbar-collapse" id="navegacion-fm">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.html">Inicio</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-              Contenido <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="usabilidad.html">Usabilidad</a></li>
-              <li><a href="arquitecturaInformacion.html">Arquitectura de la Información</a></li>
-              <li><a href="html.html">HTML</a></li>
-              <li><a href="css.html">CSS</a></li>
-              <li><a href="js.html">JavaScript</a></li>
-              <li><a href="jQuery.html">jQuery</a></li>
-              <li><a href="php.html">PHP</a></li>
-              <li><a href="mysql.html">MySQL</a></li>
-              <li><a href="bootstrap.html">BootStrap</a></li>
-              <li><a href="angularjs.html">Angular JS</a></li>
-              <li><a href="ajax.html">AJAX</a></li>
-              <li><a href="json.html">jSON</a></li>
-            </ul>
-          </li>
-          <li><a href="ejemplosAdicionales.html">Ejemplos Adicionales</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
-              Más <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="https://docs.google.com/spreadsheets/d/1wmbjMiMReDwduc0kb1ToaQcs3OBi0WRU2Qb6kYiGERQ/edit?usp=sharing" target="_blank">Lista de Calificaciones</a></li>
-              <li><a href="proyectos.html">Proyecto Final</a></li>
-              <li><a href="link.html">Enlaces de Interés</a></li>
-              <li><a href="about.html">Acerca De ...</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- Barra superior de navegación -->
+  <?php include("menuSuperior.php"); ?>
 
   <section class="main container">
 
@@ -227,7 +178,12 @@
       <p class="text-justify"></p>
       <p class="text-justify"></p>
 
-      <h2>Lista de Cotejo</h2>
+      <h2>Evaluación</h2>
+      <p class="text-justify">
+        La evaluación del proyecto final será determinará mediante cada sección de la lista de cotejo. Cada rubro se evalúa de 0 a 4 puntos, dando un total máximo de 36 puntos.
+      </p>
+
+      <h3>Lista de Cotejo</h3>
       <table class="table table-hover table-responsive table-striped table-bordered">
         <thead>
           <tr>
@@ -289,7 +245,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>Productos</td>
+            <td>Base de Datos</td>
             <td></td>
             <td></td>
             <td></td>
@@ -313,13 +269,93 @@
             <td></td>
           </tr>
         </tbody>
-
       </table>
+
+      <h3>Forma de Evaluación</h3>
+      <ul>
+        <li>
+          Catálogo de Productos:
+          <ul>
+            <li>¿Existen al menos 30 productos?</li>
+            <li>¿Los productos son mostrados con detalle e imágen?</li>
+          </ul>
+        </li>
+        <li>
+          Menú de Navegación
+          <ul>
+            <li>¿Se encuentra en todas las páginas?</li>
+            <li>¿Permite navegar las diferentes secciones de la página?</li>
+          </ul>
+        </li>
+        <li>
+          Sesión de usuario
+          <ul>
+            <li>¿Funciona?</li>
+            <li>¿Se mantiene abierta?</li>
+            <li>¿Se puede cerrar y abrir sin problemas?</li>
+          </ul>
+        </li>
+        <li>
+          Carrito de Compras
+          <ul>
+            <li>¿Permite agregar productos?</li>
+            <li>¿Permite modificar productos en el carrito?</li>
+            <li>¿Permite eliminar productos en el carrito?</li>
+          </ul>
+        </li>
+        <li>
+          Página de Administración
+          <ul>
+            <li>¿Existe?</li>
+            <li>¿Permite modificar productos existentes?</li>
+            <li>¿Permite agregar nuevos productos?</li>
+            <li>¿Muestra el historial?</li>
+          </ul>
+        </li>
+        <li>
+          Sitio Responsivo
+          <ul>
+            <li>¿Todas las páginas y elementos son responsivos?</li>
+          </ul>
+        </li>
+        <li>
+          Base de Datos
+          <ul>
+            <li>¿Existe?</li>
+            <li>¿Tiene las tablas y campos requeridos?</li>
+            <li>¿El sistema permite realizar consultas y modificaciones?</li>
+          </ul>
+        </li>
+        <li>
+          Creación de Cuentas de Usuario
+          <ul>
+            <li>¿Se puede hacer una cuenta nueva desde la página?</li>
+            <li>Una vez hecha, ¿se puede iniciar sesión?</li>
+          </ul>
+        </li>
+        <li>
+          Finalizar Compra
+          <ul>
+            <li>¿Se guarda la compra en el historial?</li>
+            <li>¿Se actualiza el inventario de productos?</li>
+            <li>¿Se borra el carrito de compras?</li>
+          </ul>
+        </li>
+      </ul>
+      <h2>Reporte Escrito</h2>
       <p class="text-justify">
-        La evaluación del proyecto final será determinará mediante cada sección de la lista de cotejo. Cada rubro se evalúa de 0 a 4 puntos, dando un total máximo de 36 puntos.
+        Adicional al proyecto, deberán entregar un documento escrito que deberá contener lo siguiente:
       </p>
-      <p class="text-justify">
-      </p>
+      <ul>
+        <li>Portada</li>
+        <li>Introducción</li>
+        <li>Objetivos</li>
+        <li>Diagrama de la Base de Datos</li>
+        <li>Código SQL (generado por MySQL Workbench)</li>
+        <li>Descripción de las principales páginas del proyecto</li>
+        <li>Enlace hacia su repositorio Git</li>
+        <li>Conclusiones</li>
+      </ul>
       <p class="text-justify">
       </p>
       <p class="text-justify"></p>
