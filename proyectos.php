@@ -180,7 +180,9 @@
 
       <h2>Evaluación</h2>
       <p class="text-justify">
-        La evaluación del proyecto final será determinará mediante cada sección de la lista de cotejo. Cada rubro se evalúa de 0 a 4 puntos, dando un total máximo de 36 puntos.
+        La evaluación del proyecto final será determinará mediante cada sección de la lista de cotejo.
+        Cada rubro se evalúa de 0 a 5 puntos, dando un total máximo de 45 puntos. La calificación del proyecto se calcula dividiendo el número de
+        puntos obtenidos por la rúbrica entre 4.5.
       </p>
 
       <h3>Lista de Cotejo</h3>
@@ -188,16 +190,18 @@
         <thead>
           <tr>
             <td>#</td>
-            <td>Muy Bien (4)</td>
-            <td>Bien (3)</td>
-            <td>Regular (2)</td>
-            <td>Mal (1)</td>
-            <td>Muy mal (0)</td>
+            <td>Muy Bien (5)</td>
+            <td>Bien (4)</td>
+            <td>Regular (3)</td>
+            <td>Mal (2)</td>
+            <td>Muy mal (1)</td>
+            <td>Nada (0)</td>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Catálogo de Productos</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -211,9 +215,11 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>Sesión de Usuario</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -227,9 +233,11 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>Página de Administración</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -243,9 +251,11 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>Base de Datos</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -259,9 +269,11 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>Finalizar Compra</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>

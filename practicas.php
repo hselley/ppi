@@ -99,7 +99,7 @@
           <img class="img-responsive" src="img/tabla.png" width="800px" alt="" class="imgcenter">
         </li>
         <li>
-          Investigar como realizar una tabla que tenga celdas colapsadas o agrupadas como la siguiente:
+          Investigar como realizar una tabla que tenga celdas colapsadas o agrupadas, y realizar una tabla como la siguiente:
           <div class="table-responsive">
             <table class="table table-bordered">
               <tr>
@@ -132,8 +132,8 @@
       </p>
       <ol>
         <li> Desarrollar un programa en JS que reciba como parámetro una calificación numérica a través
-          de un elemento <code>&lt;input&gt;</code>. El archivo JS debe tener una función que haga la evaluación de acuerdo
-          a la siguiente tabla:
+          de un elemento <code>&lt;input&gt;</code> tipo número dentro de un formulario HTML. El archivo JS debe
+          tener una función que haga la evaluación de acuerdo a la siguiente tabla:
           <div class="table-responsive">
             <table class="table table-bordered table-hover">
               <thead>
@@ -169,8 +169,8 @@
         </li>
         <li>
           <p class="text-justify">
-            Desarrollar un script en JavaScript que reciba a través de un <code>&lt;input&gt;</code> de HTML un
-            número y calcule el factorial de ese número.
+            Desarrollar un script en JavaScript que reciba un número a través de un <code>&lt;input&gt;</code> tipo número
+            dentro de un formulario HTML y calcule el factorial de ese número.
           </p>
           <p class="text-justify">
             Considere que si <code>n</code> es positivo el factorial es

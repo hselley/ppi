@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Programación para Internet</title>
+  <title>Desarrollo de Aplicaciones Web</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="stylesheet" href="../css/iconos.css">
@@ -554,7 +554,153 @@
 
       <h2>Formularios de HTML y JavaScript</h2>
       <p class="text-justify">
-        <b>Ejemplo 13</b>. Uso de formularios y JavaScript
+        <b>Ejemplo 13.</b> Cálculo del factorial de un número ingresado a través de un formulario.
+      </p>
+      <pre><code>
+    &lt!DOCTYPE html&gt
+    &lthtml lang="en"&gt
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtFactorial Cíclico&lt/title&gt
+        &ltscript&gt
+            function borrar() {
+                document.getElementById("resultado").innerHTML = ""
+                console.log("Borrado")
+            }
+
+            function factorial() {
+                valor = document.getElementById("numero").value
+                var x = parseInt(valor)
+                console.log("Llamamos a la función cíclica")
+                factorialC(x)
+                console.log(x)
+            }
+
+            function factorialC(x) {
+                var f = 1
+                for(i=1; i&lt=x; i++) {
+                    f*=i
+                    console.log(f)
+                }
+                salida = x + "! = " + f
+                document.getElementById("resultado").innerHTML = salida
+            }
+        &lt/script&gt
+    &lt/head&gt
+    &ltbody&gt
+        &lth1&gtFactorial Cíclico&lt/h1&gt
+        &ltp&gtIngrese un número entero positivo.&lt/p&gt
+        &ltform action=""&gt
+            &ltinput type="number" min="0" id="numero"&gt
+        &lt/form&gt
+        &ltbutton onclick="factorial()"&gtCalcular&lt/button&gt
+        &ltbutton onclick="borrar()"&gtBorrar&lt/button&gt
+        &ltp id="resultado"&gt&lt/p&gt
+    &lt/body&gt
+    &lt/html&gt
+      </code></pre>
+      <p class="text-justify">
+        <b>Ejemplo 14.</b> Cálculo de la serie de ULAM, ingresando un número desde un formulario.
+      </p>
+      <pre><code>
+    &lt!DOCTYPE html&gt
+    &lthtml lang="en"&gt
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtULAM&lt/title&gt
+        &ltscript&gt
+            function ulam() {
+                var y = ""
+                // Borrar el contenido del párrafo
+                document.getElementById("serie").innerHTML = y
+
+                x = document.getElementById("numero").value
+                console.log(x)
+                var valor = parseInt(x)
+            
+                while(valor != 1) {
+                    if(valor % 2 == 0)
+                        valor /= 2
+                    else
+                        valor = 3*valor + 1
+                    console.log(valor)
+
+                    y = y + "&ltbr&gt" + valor
+                    document.getElementById("serie").innerHTML = y
+                }            
+            }
+
+            function borrar() {
+                // Borrar el contenido del párrafo
+                document.getElementById("serie").innerHTML = ""
+            }
+        &lt/script&gt
+    &lt/head&gt
+    &ltbody&gt
+        &lth1&gtSerie de ULAM&lt/h1&gt
+        &ltp&gtIngrese un número entero positivo.&lt/p&gt
+        &ltform action=""&gt
+            &ltinput type="number" min="1" id="numero"&gt
+        &lt/form&gt
+        &ltbutton onclick="ulam()"&gtCalcular&lt/button&gt
+        &ltbutton onclick="borrar()"&gtBorrar&lt/button&gt
+        &lth3&gtResultado de la serie&lt/h3&gt
+        &ltp id="serie"&gtasd&lt/p&gt
+    &lt/body&gt
+    &lt/html&gt
+      </code></pre>
+      <p class="text-justify">
+        <b>Ejemplo 15.</b> Serie de Fibonacci. Obtener la <i>n</i>-ésima cifra de la serie obteniendo el número <i>n</i>  
+        desde un formulario.
+      </p>
+      <pre><code>
+    &lt!DOCTYPE html&gt
+    &lthtml lang="en"&gt
+    &lthead&gt
+        &ltmeta charset="UTF-8"&gt
+        &ltmeta http-equiv="X-UA-Compatible" content="IE=edge"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+        &lttitle&gtFibonacci Cíclico&lt/title&gt
+    &lt/head&gt
+    &ltbody&gt
+        &lth1&gtSerie de Fibonacci (versión cíclica)&lt/h1&gt
+        &ltp&gtIngrese un número positivo, será la cantidad de cifras de la serie.&lt/p&gt
+        &ltform action=""&gt
+            &ltinput type="number" min="0" id="numero"&gt
+        &lt/form&gt
+        &ltbutton onclick="fib()"&gtCalcular&lt/button&gt
+        &ltp id="salida"&gt&lt/p&gt
+        &ltscript&gt
+            function fib() {
+                valor = document.getElementById("numero").value
+                x = parseInt(valor)
+                console.log(x)
+
+                f0=0
+                f1=1
+
+                salida = ""
+
+                for(i=0; i&lt=x; i++) {
+                    f=f0+f1
+                    f0 = f1
+                    f1 = f
+                    console.log(f)
+                    salida = salida + "&ltbr&gt" + f
+                }
+                document.getElementById("salida").innerHTML = salida
+            }
+        &lt/script&gt
+    &lt/body&gt
+    &lt/html&gt
+      </code></pre>
+
+      <p class="text-justify">
+        <b>Ejemplo 16</b>. Uso de formularios y JavaScript
       </p>
       <p class="text-justify">
         HTML:
@@ -600,7 +746,7 @@
   }
       </code></pre>
       <p class="text-justify">
-        <b>Ejemplo 14</b>. Formularios y tablas dinámicas.
+        <b>Ejemplo 17</b>. Formularios y tablas dinámicas.
       </p>
       <p class="text-justify">
         HTML:
@@ -732,6 +878,238 @@
           }
         }
       </code></pre>
+      <p class="text-justify">
+        <b>Ejercicio 17. </b> Extracción de valores de input <code>radio</code>.
+      </p>
+      <p class="text-justify">
+        HTML
+      </p>
+      <pre><code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="es"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;title&gt;Formulario&lt;/title&gt;
+      &lt;script type="text/javascript" src="extraer.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Formulario tipo Radio&lt;/h1&gt;
+      &lt;p&gt;Extracción de valor del imput tipo radio&lt;/p&gt;
+      &lt;h2&gt;Elija su genero:&lt;/h2&gt;
+      &lt;form action=""&gt;
+        &lt;label for="mas"&gt;Masculino:&lt;/label&gt;
+        &lt;input type="radio" name="genero" value="Masculino" id="mas"&gt; &lt;br&gt;
+        &lt;label for="fem"&gt;Femenino:&lt;/label&gt; 
+        &lt;input type="radio" name="genero" value="Femenino" id="fem"&gt; &lt;br&gt;
+        &lt;label for="lgbti"&gt;LGBTI:&lt;/label&gt;
+        &lt;input type="radio" name="genero" value="LGBTI" id="lgbti"&gt; &lt;br&gt;
+        &lt;label for="none"&gt;Ninguno:&lt;/label&gt;
+        &lt;input type="radio" name="genero" value="Ninguno" id="none"&gt; &lt;br&gt;
+        &lt;label for="otro"&gt;Otro: &lt;/label&gt;
+        &lt;input type="radio" name="genero" value="Otro" id="otro"&gt; &lt;br&gt;
+      &lt;/form&gt;
+      &lt;button onclick="extraccion()"&gt;Seleccionar&lt;/button&gt;
+      &lt;p id="resultado"&gt;&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+      </code></pre>
+      <p class="text-justify">
+        JS
+      </p>
+      <p class="text-justify">
+        La primer forma de extraer el valor del selector elegido. 
+        El método clásico y manual de extracción.
+      </p>
+      <pre><code>
+    function extraccion() {
+
+    var g = document.getElementsByName("genero");
+    var y = document.getElementById("resultado");
+    var cad = "";
+    var genero;
+
+    // Primer método: clásico
+    for(i=0; i&lt;g.length; i++) {
+      if(g[i].checked) {
+        genero = g[i].value;
+        console.log(genero);
+        cad = "&lt;p&gt;Su genero es " + genero + "&lt;/p&gt;";
+      }
+    }
+        
+    if(genero!=null)
+        y.innerHTML = cad;
+    else
+        y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;"; 
+    }
+      </code></pre>
+      <p class="text-justify">
+        La segunda forma de extraer el valor del selector elegido. Una
+        mejora al método clásico.
+      </p>
+      <pre><code>
+    function extraccion() {
+
+    var g = document.getElementsByName("genero");
+    var y = document.getElementById("resultado");
+    var cad = "";
+    var genero;
+
+    // Segundo método: mejora del clásico
+    x = document.querySelector('input[name=genero]:checked');
+    if(x != null) {
+        genero = x.value;
+        console.log(genero) 
+        cad = "&lt;p&gt;" + genero + "&lt;/p&gt;";
+    }
+        
+    if(genero!=null)
+        y.innerHTML = cad;
+    else
+        y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;"; 
+    }
+      </code></pre>
+      <p class="text-justify">
+        La tercer forma de extraer el valor del selector elegido.
+        Una forma más práctica.
+      </p>
+      <pre><code>
+    function extraccion() {
+
+    var g = document.getElementsByName("genero");
+    var y = document.getElementById("resultado");
+    var cad = "";
+    var genero;
+
+    // Tercer método
+    z = document.querySelector('input[name=genero]:checked');
+    if(z!=null) {
+      genero = z.value;
+      console.log(genero);
+      cad = "&lt;p&gt;Su genero es " + genero + "&lt;/p&gt;";
+    }
+
+    if(genero!=null)
+        y.innerHTML = cad;
+    else
+        y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;"; 
+
+    }              
+      </code></pre>
+      <p class="text-juatify">
+        <b>Ejemplo 18.</b> Extracción de valores input <code>checkbox</code>.
+      </p>
+      <p class="text-juatify">HTML</p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="es"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Checkbox&lt;/title&gt;
+    &lt;script type="text/javascript" src="extraerCheckbox.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Medio transporte&lt;/h1&gt;
+    &lt;p&gt;Seleccione su medio de transporte predilecto.&lt;/p&gt;
+    &lt;form action=""&gt;
+      &lt;input type="checkbox" name="transporte" value="Automovil" id="auto"&gt;
+      &lt;label for="auto"&gt;Automóvil&lt;/label&gt; 
+      &lt;br&gt;
+      &lt;input type="checkbox" name="transporte" value="Motocicleta" id="moto"&gt;
+      &lt;label for="moto"&gt;Motocicleta&lt;/label&gt;
+      &lt;br&gt;
+      &lt;input type="checkbox" name="transporte" value="Bicicleta" id="bici"&gt;
+      &lt;label for="bici"&gt;Bicicleta&lt;/label&gt;
+      &lt;br&gt;
+      &lt;input type="checkbox" name="transporte" value="Transporte Público" id="trans"&gt;
+      &lt;label for="trans"&gt;Transporte Público&lt;/label&gt;
+      &lt;br&gt;
+      &lt;input type="checkbox" name="transporte" value="Otro" id="otro"&gt;
+      &lt;label for="otro"&gt;Otro&lt;/label&gt;
+    &lt;/form&gt;
+    &lt;button onclick="proceso()"&gt;Enviar&lt;/button&gt;
+    &lt;p id="resultado"&gt;&lt;/p&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;      
+      </code></pre>
+      <p class="text-justify">
+        La primer forma de extraer el valor del selector elegido. 
+        El método clásico y manual de extracción.
+      </p>
+      <pre><code>
+  function proceso() {
+    x = document.getElementsByName("transporte");
+    y = document.getElementById("resultado");
+    var cad = "";
+    var transporte;
+
+    // Primer método: clásico
+    for(i=0; i&lt;x.length; i++) {
+      if(x[i].checked) {
+        transporte = x[i].value;
+        console.log(transporte);
+        cad = cad + "&lt;p&gt;" + transporte + "&lt;/p&gt;";
+      }
+    }
+
+    if(transporte!=null)
+      y.innerHTML = cad;
+    else 
+      y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;";
+  }
+      </code></pre>
+      <p class="text-justify">
+        La segunda forma de extraer el valor del selector elegido. Una
+        mejora al método clásico.
+      </p>
+      <pre><code>
+  function proceso() {
+    x = document.getElementsByName("transporte");
+    y = document.getElementById("resultado");
+    var cad = "";
+    var transporte;
+
+    // Segundo método: mejora del clásico
+    for(i of x) {
+      if(i.checked) {
+        transporte = i.value;
+        console.log(transporte);
+        cad = cad + "&lt;p&gt;" + transporte + "&lt;/p&gt;";
+      }
+    }
+    
+    if(transporte!=null)
+      y.innerHTML = cad;
+    else 
+      y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;";
+  }        
+      </code></pre>
+      <p class="text-justify">
+        La tercer forma de extraer el valor del selector elegido.
+        Una forma más práctica.
+      </p>
+      <pre><code>
+  function proceso() {
+    x = document.getElementsByName("transporte");
+    y = document.getElementById("resultado");
+    var cad = "";
+    var transporte;
+
+    // Tercer método
+    z = document.querySelectorAll('input[name=transporte]:checked');
+    for(var v of z) {
+      transporte = v.value;
+      console.log(transporte);
+      cad = cad + "&lt;p&gt;" + transporte + "&lt;/p&gt;";
+    }
+    
+    if(transporte!=null)
+      y.innerHTML = cad;
+    else 
+      y.innerHTML = "&lt;p&gt;Seleccione una opción&lt;/p&gt;";
+  }        
+      </code></pre>
 
       <h2>Manejo de Errores: Throw - Try - Catch</h2>
       <p class="text-justify">
@@ -776,7 +1154,7 @@
       </code></pre>
 
       <p class="text-justify">
-        <b>Ejemplo 15</b>. Try - Catch
+        <b>Ejemplo 19</b>. Try - Catch
       </p>
       <p class="text-justify">
         HTML:
@@ -824,7 +1202,7 @@
         La excepción puede ser una cadena, numero, booleano u objeto.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 16</b>. Verificar el valor ingresado por el usuario.
+        <b>Ejemplo 20</b>. Verificar el valor ingresado por el usuario.
       </p>
       <p class="text-justify">
         HTML:
@@ -885,7 +1263,7 @@
         </li>
       </ul>
       <p class="text-justify">
-        <b>Ejemplo 17</b>. Validar campos de texto.
+        <b>Ejemplo 21</b>. Validar campos de texto.
       </p>
       <p class="text-justify">
         HTML:
@@ -923,7 +1301,7 @@
   }
       </code></pre>
       <p class="text-justify">
-        <b>Ejemplo 18</b>. Validación de dirección de correo electrónico
+        <b>Ejemplo 22</b>. Validación de dirección de correo electrónico
       </p>
       <p class="text-justify">
         HTML:
