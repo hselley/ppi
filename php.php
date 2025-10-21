@@ -1122,6 +1122,55 @@
     </article>
 
     <article class="tema">
+      <h2>PHP y formularios de HTML</h2>
+      <p class="text-justify">
+        Para obtener valores desde un formulario de PHP existen varias formas de lograrlo. Una forma muy sencilla que sólo involucra
+        un formulario y un archivo PHP se muestra en el siguiente ejemplo.
+      </p>
+      <p class="text-justify">
+        <b>Ejemplo 21</b>. Formularios HTML + PHP
+      </p>
+      <p class="text-justify">
+        HTML + PHP
+      </p>
+      <pre><code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+  &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+      &lt;title&gt;Form + PHP&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;h1&gt;Factorial en PHP&lt;/h1&gt;
+      &lt;p&gt;Ingrese un número positivo&lt;/p&gt;
+      &lt;form method="post"&gt;
+          &lt;label for="numero"&gt;Ingrese un número&lt;/label&gt;
+          &lt;input type="number" name="numero" id="numero" required min="0" step="1"&gt; 
+          &lt;input type="submit" value="Calcular"&gt;
+      &lt;/form&gt;
+
+
+      &lt;?php
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              $n = intval($_POST["numero"]);
+              echo "&lt;p&gt;" . factorial($n) . "&lt;/p&gt;";
+          }
+
+          function factorial($n) {
+              if($n==0 || $n==1) {
+                  return(1);
+              } else {
+                  return($n*factorial($n-1));
+              }
+          }        
+      ?&gt; 
+  &lt;/body&gt;
+  &lt;/html&gt; 
+      </code></pre>
+    </article>
+
+    <article class="tema">
       <h2>Validación de Formularios con PHP</h2>
       <p class="text-justify">
         En esta sección haremos la validación de formularios que contengan campos de texto, botones radio y un botón de Enviar.
@@ -1166,7 +1215,7 @@
         </tbody>
       </table>
       <p class="text-justify">
-        <b>Ejemplo 21</b>. Validación del formulario: evitando código malicioso
+        <b>Ejemplo 22</b>. Validación del formulario: evitando código malicioso
       </p>
       <p class="text-justify">
         HTML + PHP
@@ -1289,7 +1338,7 @@
         y si no lo están se envía su contenido a través de la función <code>test_input()</code>.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 22</b>. Validación del formulario: evitando código malicioso + campos requeridos.
+        <b>Ejemplo 23</b>. Validación del formulario: evitando código malicioso + campos requeridos.
       </p>
       <pre><code>
   &lt;!DOCTYPE HTML&gt;
@@ -1386,7 +1435,7 @@
         web tienen el formato correcto.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 23</b>. Validación de formularios: evitando código malicioso + campos requeridos + validación contenido.
+        <b>Ejemplo 24</b>. Validación de formularios: evitando código malicioso + campos requeridos + validación contenido.
       </p>
       <pre><code>
   &lt;!DOCTYPE HTML&gt;
@@ -1498,7 +1547,7 @@
   value="?&lt;?php echo $name;?&gt;"
       </code></pre>
       <p class="text-justify">
-        <b>Ejemplo 24</b>. Validación de formularios: evitando código malicioso + campos requeridos + validación contenido.
+        <b>Ejemplo 25</b>. Validación de formularios: evitando código malicioso + campos requeridos + validación contenido.
       </p>
       <pre><code>
   &lt;!DOCTYPE HTML&gt;
