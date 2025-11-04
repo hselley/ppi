@@ -745,7 +745,7 @@
     document.getElementById("resultado").innerHTML = x;
   }
       </code></pre>
-      <p class="text-justify">
+      <p class="text-justify" id="ej17">
         <b>Ejemplo 17</b>. Formularios y tablas dinámicas.
       </p>
       <p class="text-justify">
