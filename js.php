@@ -879,7 +879,7 @@
         }
       </code></pre>
       <p class="text-justify">
-        <b>Ejercicio 17. </b> Extracción de valores de input <code>radio</code>.
+        <b>Ejercicio 18. </b> Extracción de valores de input <code>radio</code>.
       </p>
       <p class="text-justify">
         HTML
@@ -944,7 +944,7 @@
     }
       </code></pre>
       <p class="text-justify">
-        La segunda forma de extraer el valor del selector elegido. Una
+        <b>Ejercicio 19. </b> La segunda forma de extraer el valor del selector elegido. Una
         mejora al método clásico.
       </p>
       <pre><code>
@@ -970,7 +970,7 @@
     }
       </code></pre>
       <p class="text-justify">
-        La tercer forma de extraer el valor del selector elegido.
+        <b>Ejercicio 20. </b> La tercer forma de extraer el valor del selector elegido.
         Una forma más práctica.
       </p>
       <pre><code>
@@ -997,7 +997,7 @@
     }              
       </code></pre>
       <p class="text-juatify">
-        <b>Ejemplo 18.</b> Extracción de valores input <code>checkbox</code>.
+        <b>Ejemplo 21.</b> Extracción de valores input <code>checkbox</code>.
       </p>
       <p class="text-juatify">HTML</p>
       <pre><code>
@@ -1060,7 +1060,7 @@
   }
       </code></pre>
       <p class="text-justify">
-        La segunda forma de extraer el valor del selector elegido. Una
+        <b>Ejercicio 22. </b>La segunda forma de extraer el valor del selector elegido. Una
         mejora al método clásico.
       </p>
       <pre><code>
@@ -1086,7 +1086,7 @@
   }        
       </code></pre>
       <p class="text-justify">
-        La tercer forma de extraer el valor del selector elegido.
+        <b>Ejercicio 23. </b>La tercer forma de extraer el valor del selector elegido.
         Una forma más práctica.
       </p>
       <pre><code>
@@ -1154,7 +1154,7 @@
       </code></pre>
 
       <p class="text-justify">
-        <b>Ejemplo 19</b>. Try - Catch
+        <b>Ejemplo 24</b>. Try - Catch
       </p>
       <p class="text-justify">
         HTML:
@@ -1202,7 +1202,7 @@
         La excepción puede ser una cadena, numero, booleano u objeto.
       </p>
       <p class="text-justify">
-        <b>Ejemplo 20</b>. Verificar el valor ingresado por el usuario.
+        <b>Ejemplo 25</b>. Verificar el valor ingresado por el usuario.
       </p>
       <p class="text-justify">
         HTML:
@@ -1263,7 +1263,7 @@
         </li>
       </ul>
       <p class="text-justify">
-        <b>Ejemplo 21</b>. Validar campos de texto.
+        <b>Ejemplo 26</b>. Validar campos de texto.
       </p>
       <p class="text-justify">
         HTML:
@@ -1301,7 +1301,7 @@
   }
       </code></pre>
       <p class="text-justify">
-        <b>Ejemplo 22</b>. Validación de dirección de correo electrónico
+        <b>Ejemplo 27</b>. Validación de dirección de correo electrónico
       </p>
       <p class="text-justify">
         HTML:
