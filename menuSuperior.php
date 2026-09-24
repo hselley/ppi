@@ -1,6 +1,3 @@
-<?php
-  include("urlListaCalificaciones.php");
- ?>
  <!-- Barra superior de navegación -->
  <nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
    <div class="container">
@@ -44,7 +41,6 @@
              Más <span class="caret"></span>
            </a>
            <ul class="dropdown-menu" role="menu">
-             <li><a href="<?php echo $url; ?>" target="_blank">Lista de Calificaciones</a></li>
              <li><a href="practicas.php">Prácticas</a></li>
              <li><a href="proyectos.php">Proyectos Finales</a></li>
              <li><a href="link.php">Enlaces de Interés</a></li>
