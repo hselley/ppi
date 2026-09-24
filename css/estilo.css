@@ -3,18 +3,18 @@
 @font-face {
   font-family: miFuente;
   /* La fuente es Ubuntu Regular, que se guarda dentro del sitio para mayor rápidez de carga */
-  src: url(../../css/ubuntu-font-family/Ubuntu-R.ttf);
+  /* src: url(../../css/ubuntu-font-family/Ubuntu-R.ttf); */
 }
 
 /* Se define la fuente personalizada: código */
 @font-face {
   font-family: miFuenteCodigo;
   /* La fuente es Ubuntu Mono, que se guarda dentro del sitio para mayor rápidez de carga */
-  src: url(../../css/ubuntu-font-family/UbuntuMono-R.ttf);
+  /* src: url(../../css/ubuntu-font-family/UbuntuMono-R.ttf); */
 }
 
 body {
-    font-family: "miFuente";
+    font-family: "Droid Sans", "miFuente";
 }
 
 /* Header */
@@ -130,8 +130,8 @@ article {
 
 /* Estilo para el código */
 pre {
-  font-family: "miFuenteCodigo";
-  font-size: 0.875em;
+  font-family: "Cantarell", "Nimbus Mono PS", "Source Code Pro";
+  font-size: 1.125em;
 }
 
 /* Estilo para ejemplos en parrafos */
