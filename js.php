@@ -1346,6 +1346,169 @@
   }
       </code></pre>
 
+      <p class="text-justify">
+        <b>Ejemplo 28</b>. Cálculo de días para el próximo cumpleaños. Ingrese su fecha de cumpleaños
+        y el programa le dirá los días que faltan para su cumpleaños, o si es hoy o si ya pasó.
+      </p>
+      <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Fecha de cumpleaños&lt;/title&gt;
+    &lt;script&gt;
+        function fecha() {
+            // -------------------------------------------------------------------------
+            // Construcción de los objetos que almacenan las fechas de cumpleaños y hoy
+            fechaInput = document.getElementById("cumple").value;
+            fechaCumple = new Date(fechaInput);
+            fechaHoy = new Date();  
+            // -------------------------------------------------------------------------
+
+            // -------------------------------------------------------------------------
+            // El manejo de fechas en JavaScript + HTML es un desastre, se mezclan usos  
+            // horariosy es muy fácil confundirse. Lo menos confuso es convertir la 
+            // fecha del cumpleaños y de hoy a la medianoche en el UTC para el cálculo.
+            fechaCumple.setUTCHours(0,0,0,0);   // horas, minutos, segundos, milisegs 
+            fechaHoy.setUTCHours(0,0,0,0);      // horas, minutos, segundos, milisegs 
+            console.log(fechaCumple);
+            console.log(fechaHoy);
+            // -------------------------------------------------------------------------
+
+            // -------------------------------------------------------------------------
+            // Este bloque solo lo hice para desmenuzar la fecha en sus componentes
+            const dia = fechaCumple.getDate() + 1;
+            console.log(dia);
+            const mes = fechaCumple.getMonth() + 1;
+            console.log(mes);
+            const anio = fechaCumple.getFullYear();
+            console.log(anio);
+            // -------------------------------------------------------------------------
+
+            // -------------------------------------------------------------------------
+            // Esta forma de construir cadenas se llama 'interpolación', 
+            // se usa el acento grave `
+            cadena = `Tu cumpleaños es el ${dia} del mes ${mes} del año ${anio}.`; 
+            document.getElementById("resultado1").innerHTML = cadena;
+            // -------------------------------------------------------------------------
+
+            // -------------------------------------------------------------------------
+            // Determinación del tiempo faltante para el cumpleaños
+            const diferenciaEnMs = fechaCumple - fechaHoy;          
+            const msEnUnDia = 1000 * 60 * 60 * 24;
+            // Math.ceil redondea hacia arriba el cociente 
+            const diasRestantes = Math.ceil(diferenciaEnMs / msEnUnDia);
+            console.log(diasRestantes);
+            // -------------------------------------------------------------------------
+
+            // -------------------------------------------------------------------------
+            // Esto es para comprobar si ya pasó, es hoy o si falta para el cumpleaños
+            if (diasRestantes &lt; 0) {
+                cadena = "¡Tu cumpleaños ya pasó este año!";
+            } else if (diasRestantes == 0) {
+                cadena = "¡Hoy es tu cumpleaños! ¡Felicidades!";
+            } else {
+                cadena = `¡Aún faltan ${diasRestantes} días para tu cumpleaños!`;
+            }
+            document.getElementById("resultado2").innerHTML = cadena;
+            // -------------------------------------------------------------------------
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Ingrese su fecha de cumpleaños&lt;/h1&gt;
+    &lt;!-- El atributo `onchange` ejecuta `fecha()` cada que cambia el formulario --&gt;
+    &lt;form action="" onchange="fecha()"&gt;
+        &lt;input type="date" name="cumple" id="cumple"&gt;
+    &lt;/form&gt;
+    &lt;p id="resultado1"&gt;&lt;/p&gt;
+    &lt;p id="resultado2"&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+      </code></pre>
+
+      <p class="text-justify">
+        <b>Ejemplo 29</b>. Contador en retroceso. Ingrese la cantidad de segundos, presione 
+        <code>Iniciar</code> y el programa realiza la cuenta regresiva.
+      </p>
+      <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Reloj&lt;/title&gt;
+    &lt;style&gt;
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Reloj en retroceso&lt;/h1&gt;
+    &lt;p&gt;Este programa hace una cuenta regresiva por el tiempo que usted indique.&lt;/p&gt;
+    &lt;p&gt;Introduzca el tiempo en segundos que desea para hacer la cuenta regresiva.&lt;/p&gt;
+    &lt;input type="number" id="tiempo" min="0" style="width: 25%;"&gt;
+    &lt;button id="boton"&gt;Iniciar cuenta regresiva&lt;/button&gt;
+    &lt;h2 class="center" id="contador"&gt;&lt;/h2&gt;
+    &lt;script&gt;
+        // -------------------------------------------------------------------------
+        // Aquí se obtienen accesos a los elementos que manipulará JavaScript
+        const inputSegundos = document.getElementById('tiempo');
+        const boton = document.getElementById('boton');
+        const mostrar = document.getElementById('contador');
+        // -------------------------------------------------------------------------
+
+        // -------------------------------------------------------------------------
+        // addEventListener 'escuchará' el evento 'click', cuando esto ocurra 
+        // ejecutará lo que contiene la función.
+        boton.addEventListener('click', function() {
+            
+            // Se obtiene el valor del input y se convierte en un número entero
+            let tiempoRestante = parseInt(inputSegundos.value);
+
+            // Se muestra de inmediato el tiempo en el &lt;h2&gt;
+            mostrar.textContent = tiempoRestante;
+
+            // Se deshabilitan el botón y el input para evitar duplicar el conteo
+            boton.disabled = true;
+            inputSegundos.disabled = true;
+
+            // Se crea el intervalo de tiempo con el método nativo 'setInterval',
+            // este método le pide al navegador web que ejecute una función 
+            // de manera repetitiva e indefinida con el periodo indicado, 
+            // en este caso 1000 milisegundos.
+            const intervalo = setInterval(function() {
+
+                // Se resta 1 segundo para efectuar la cuenta regresiva
+                tiempoRestante--;
+
+                // Se actualiza el &lt;h2&gt;
+                mostrar.textContent = tiempoRestante;
+
+                // Se verifica si el tiempo se ha acabado
+                if (tiempoRestante &lt;= 0) {
+                    
+                    // Si es así, se detiene 'setInterval' 
+                    // para que no siga corriendo indefinidamente
+                    clearInterval(intervalo);
+                    
+                    // Mensaje final
+                    mostrar.textContent = "¡Tiempo terminado!";
+                }
+
+            }, 1000); // 1000 milisegundos = 1 segundo
+        });
+        // -------------------------------------------------------------------------
+    &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+
     </article>
 
 
